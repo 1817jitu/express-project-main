@@ -1,0 +1,30 @@
+<%-include('../header.ejs')%>
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <h1><%= d.title %></h1>
+            <p><%= d.createdAt %></p>
+            <img src="<%= d.image.url %>" class="rounded shadow-lg" alt="">
+            <p><%= d.description %></p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <h2 class="shadow-lg text-center p-2 rounded border border-dark">Latest Blogs</h2>
+            <% b.forEach((item)=>{ %>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="<%= item.image.url %>" class="w-100 rounded shadow-lg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <h6><%= item.title %></h6>
+                    <p><%= item.description.slice(0,80) %>... </p>
+                </div>
+            </div>
+            <hr>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+
+<%-include('../footer.ejs')%>

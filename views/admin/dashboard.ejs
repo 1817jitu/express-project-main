@@ -1,0 +1,24 @@
+<%-include('../header.ejs') %>
+
+<div class="container">
+  <div class="row">
+    <p class="fst-italic">Welcome <%= userName %></p>
+    <div class="col-md-2">
+      <%-include('../admin/component/adminSidebar.ejs') %>
+    </div>
+    <div class="col-md-10">
+      <!-- main content here -->
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+<%-include('../footer.ejs') %>

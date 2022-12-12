@@ -1,0 +1,56 @@
+<%-include('../../header.ejs') %>
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-2">
+      <%-include('../../admin/component/adminSidebar.ejs') %>
+    </div>
+    <div class="col-md-10">
+      <!-- main content here --->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h3 class="text-center mb-3 fst-italic">Add New Blog</h3>
+          <form action="/admin/blogInsert" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="title" role="button">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                name="title"
+                placeholder="Enter Title"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="description" role="button">Description</label>
+              <input
+                type="text"
+                class="form-control"
+                id="description"
+                name="description"
+                placeholder="Enter Description"
+              />
+              <div class="mb-3">
+                <label for="image" role="button">Image</label>
+                <input type="file" id="image" name="image" class="form-control"></input>
+              </div>
+            </div>
+            <!-- <div class="mb-3">
+              <label for="category" role="button">Category</label>
+              <select name="category" id="category" class="form-select mt-2">
+                <option value="">---- Select ----</option>
+                <option value="">Static category 1</option>
+                <option value="">Static category 2</option>
+              </select>
+            </div> -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%-include('../../footer.ejs') %>
